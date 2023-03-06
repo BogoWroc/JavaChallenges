@@ -1,0 +1,16 @@
+version: '2.4'
+
+
+services:
+  rest-mock:
+    image: mockserver/mockserver:mockserver-5.11.2
+    ports:
+      - "9080:1080"
+    environment:
+      MOCKSERVER_WATCH_INITIALIZATION_JSON: "true"
+      MOCKSERVER_PROPERTY_FILE: /config/mockserver.properties
+      MOCKSERVER_INITIALIZATION_JSON_PATH: /config/initializerJson.json
+    volumes:
+      - type: bind
+        source: ./mock-resources/rest-mock
+        target: /config

@@ -1,0 +1,22 @@
+[
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/"
+    },
+    "httpResponse": {
+      "body": "{\"message\": \"Testing data\"}",
+      "statusCode": 200
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/sub.*"
+    },
+    "httpResponse": {
+      "body": "[{\"message\": \"Testing subdata 1\"},{\"message\": \"Testing subdata 2\"}]",
+      "statusCode": 200
+    }
+  }
+]
